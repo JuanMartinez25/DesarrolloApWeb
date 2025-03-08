@@ -21,19 +21,27 @@
     </nav>
 
     <main>
-        <section class="contact-form">
-            <h2 style="text-align: center;">Formulario de Contacto</h2>
-            <form action="#" method="POST" style="text-align: center;">
-                <label for="name">Nombre</label>
-                <input type="text" id="name" name="name" required>
+        <section>
+            <ul>
+                <h2>Formulario de Contacto</h2>
+            </ul>
+            <form action="#" method="POST" enctype="multipart/form-data">
+                <ul>
+                    <div class="row">
+                        <label for="name">Nombre</label> <br />
+                        <input type="text" id="name" name="name" required pattern=".{3,50}", title="El nombre debe tener entre 3 y 50 caracteres">
+                    </div>
+                    <div>
+                        <label for="email">Correo Electrónico</label> <br />
+                        <input type="email" id="email" name="email" required>
+                    </div>
 
-                <label for="email">Correo Electrónico</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Mensaje</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-
-                <button type="submit">Enviar</button>
+                    <div>
+                        <label for="message">Mensaje</label> <br />
+                        <textarea id="message" name="message" rows="5" required minlength="10" placeholder="Escribe tu mensaje (mínimo 10 caracteres)"></textarea>
+                    </div>
+                    <button type="submit">Enviar</button>
+                </ul>
             </form>
         </section>
     </main>
